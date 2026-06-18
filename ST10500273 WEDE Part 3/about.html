@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Mhlanga Holdings</title>
+  <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="navbar">
+      <a href="index.html" class="logo">Mhlanga Holdings</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#" class="submenu-toggle">Services</a>
+          <ul class="submenu">
+            <li><a href="investmentplans.html">Investment Plans</a></li>
+            <li><a href="financialconsulting.html">Financial Consulting</a></li>
+            <li><a href="wealthmanagement.html">Wealth Management</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Page Header ── -->
+  <div class="page-header">
+    <h1>About Us</h1>
+    <p>Get to know Mhlanga Holdings — your trusted financial partner.</p>
+  </div>
+
+  <!-- ── Main Content ── -->
+  <main class="content-section">
+    <p>Welcome to Mhlanga Holdings, your trusted financial partner since 2026. We are a premier investment firm dedicated to helping our clients build wealth and achieve their financial goals through strategic analysis and tailored investment solutions.</p>
+
+    <br>
+    <div class="mission-box">
+      <h2>Our Mission &amp; Values</h2>
+      <p>Our mission is to provide expert financial guidance and superior investment opportunities that ensure long-term prosperity for our clients. We operate with integrity, transparency, and a commitment to delivering on every promise.</p>
+    </div>
+
+    <div class="card-grid" style="margin-top: 40px;">
+      <div class="card">
+        <img src="./IMG/IMG17.avif" alt="Our Goal">
+        <div class="card-body">
+          <h2>Our Goal</h2>
+          <p>We aim to be the most trusted investment partner in South Africa, empowering every client to achieve lasting financial freedom.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-logo">
+      <h2>Mhlanga Holdings</h2>
+      <p>Start your investment journey today. Have a stress-free life with us.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="investmentplans.html">Investment Plans</a></li>
+        <li><a href="financialconsulting.html">Financial Consulting</a></li>
+        <li><a href="wealthmanagement.html">Wealth Management</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mhlanga Holdings. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./js/shared.js"></script>
+  <script>
+    
+    // ── Hamburger ──
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+
+    // ── Mobile submenu toggle ──
+    document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+      toggle.addEventListener('click', e => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          toggle.nextElementSibling.classList.toggle('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Mhlanga Holdings</title>
+  <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="navbar">
+      <a href="index.html" class="logo">Mhlanga Holdings</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#" class="submenu-toggle">Services</a>
+          <ul class="submenu">
+            <li><a href="investmentplans.html">Investment Plans</a></li>
+            <li><a href="financialconsulting.html">Financial Consulting</a></li>
+            <li><a href="wealthmanagement.html">Wealth Management</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Page Header ── -->
+  <div class="page-header">
+    <h1>Contact Us</h1>
+    <p>Feel free to reach out for any inquiries or support. We are here to assist you.</p>
+  </div>
+
+  <!-- ── Contact Content ── -->
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <ul>
+        <li><span>Email:</span> mhlangaholdings@gmail.co.za</li>
+        <li><span>Phone:</span> +27 11 349 38475</li>
+        <li><span>Address:</span> 123 Smith Street, Durban, South Africa</li>
+      </ul>
+    </div>
+
+    <h2 style="color:var(--gold); margin-bottom:24px;">Send Us a Message</h2>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message</button>
+      <p id="form-success" style="display:none; color:#c9a84c; margin-top:8px;">Thank you! We'll be in touch shortly.
+      </p>
+    </form>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-logo">
+      <h2>Mhlanga Holdings</h2>
+      <p>Start your investment journey today. Have a stress-free life with us.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="investmentplans.html">Investment Plans</a></li>
+        <li><a href="financialconsulting.html">Financial Consulting</a></li>
+        <li><a href="wealthmanagement.html">Wealth Management</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <section class="map-section">
+        <h2>Find Us</h2>
+        <iframe src="https://www.google.com/maps?q=123+Smith+Street+Durban+South+Africa&output=embed" width="100%"
+          height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </section>
+      <p>&copy; 2026 Mhlanga Holdings. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./javascript/shared.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      e.target.reset();
+    }
+
+    // ── Hamburger ──
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+
+    // ── Mobile submenu toggle ──
+    document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+      toggle.addEventListener('click', e => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          toggle.nextElementSibling.classList.toggle('open');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

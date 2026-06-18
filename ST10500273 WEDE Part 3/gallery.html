@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Mhlanga Holdings</title>
+  <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="navbar">
+      <a href="index.html" class="logo">Mhlanga Holdings</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#" class="submenu-toggle">Services</a>
+          <ul class="submenu">
+            <li><a href="investmentplans.html">Investment Plans</a></li>
+            <li><a href="financialconsulting.html">Financial Consulting</a></li>
+            <li><a href="wealthmanagement.html">Wealth Management</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Page Header ── -->
+  <div class="page-header">
+    <h1>Gallery</h1>
+    <p>Welcome to our gallery — a showcase of the vibrant and dynamic world of Mhlanga Holdings.</p>
+  </div>
+
+  <!-- ── Slideshow ── -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="./img/IMG10.avif" alt="Modern city skyline representing wealth and growth">
+      <div class="slide-overlay"></div>
+      <div class="numbertext">1 / 6</div>
+      <div class="slide-caption">Building Wealth, Securing Futures</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="./img/IMG15.avif" alt="Financial planning and consulting">
+      <div class="slide-overlay"></div>
+      <div class="numbertext">2 / 6</div>
+      <div class="slide-caption">Expert Financial Guidance</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="./img/IMG12.avif" alt="Investment growth and market success">
+      <div class="slide-overlay"></div>
+      <div class="numbertext">3 / 6</div>
+      <div class="slide-caption">Your Trusted Investment Partner</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="./img/IMG16.avif" alt="Investment growth and market success">
+      <div class="slide-overlay"></div>
+      <div class="numbertext">4 / 6</div>
+      <div class="slide-caption">Innovative Investment Solutions</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="./img/IMG30.avif" alt="Financial success and wealth management">
+      <div class="slide-overlay"></div>
+      <div class="numbertext">5 / 6</div>
+      <div class="slide-caption">Achieve Financial Freedom with Us</div>
+    </div>
+      <div class="mySlides fade">
+        <img src="./img/IMG11.avif" alt="Financial success and wealth management">
+        <div class="slide-overlay"></div>
+        <div class="numbertext">6 / 6</div>
+        <div class="slide-caption">Transform Your Financial Future</div>
+      </div>
+    </div>
+    <button class="slide-prev" onclick="changeSlide(-1)" aria-label="Previous">&#8592;</button>
+    <button class="slide-next" onclick="changeSlide(1)" aria-label="Next">&#8594;</button>
+  </div>
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-logo">
+      <h2>Mhlanga Holdings</h2>
+      <p>Start your investment journey today. Have a stress-free life with us.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="investmentplans.html">Investment Plans</a></li>
+        <li><a href="financialconsulting.html">Financial Consulting</a></li>
+        <li><a href="wealthmanagement.html">Wealth Management</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mhlanga Holdings. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./js/shared.js"></script>
+  <script>
+    let slideIndex = 1;
+    let autoTimer;
+
+    function showSlide(n) {
+      const slides = document.querySelectorAll('.mySlides');
+      const dots = document.querySelectorAll('.dot');
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      slides[slideIndex - 1].classList.add('active');
+      dots[slideIndex - 1].classList.add('active');
+    }
+
+    function changeSlide(n) {
+      clearInterval(autoTimer);
+      slideIndex += n;
+      showSlide(slideIndex);
+      startAuto();
+    }
+
+    function currentSlide(n) {
+      clearInterval(autoTimer);
+      slideIndex = n;
+      showSlide(slideIndex);
+      startAuto();
+    }
+
+    function startAuto() {
+      autoTimer = setInterval(() => {
+        slideIndex++;
+        showSlide(slideIndex);
+      }, 5000);
+    }
+
+    showSlide(slideIndex);
+    startAuto();
+    // ── Hamburger ──
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+
+    // ── Mobile submenu toggle ──
+    document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+      toggle.addEventListener('click', e => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          toggle.nextElementSibling.classList.toggle('open');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

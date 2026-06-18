@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mhlanga Holdings</title>
+  <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="navbar">
+      <a href="index.html" class="logo">Mhlanga Holdings</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#" class="submenu-toggle">Services</a>
+          <ul class="submenu">
+            <li><a href="investmentplans.html">Investment Plans</a></li>
+            <li><a href="financialconsulting.html">Financial Consulting</a></li>
+            <li><a href="wealthmanagement.html">Wealth Management</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Slideshow ── -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="./img/img20.jpg" alt="Modern city skyline representing wealth and growth">
+      <div class="slide-overlay"></div>
+      <div class="numbertext">1 / 3</div>
+      <div class="slide-caption">Building Wealth, Securing Futures</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="./img/img21.jpg" alt="Financial planning and consulting">
+      <div class="slide-overlay"></div>
+      <div class="numbertext">2 / 3</div>
+      <div class="slide-caption">Expert Financial Guidance</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="./img/img22.jpg" alt="Investment growth and market success">
+      <div class="slide-overlay"></div>
+      <div class="numbertext">3 / 3</div>
+      <div class="slide-caption">Your Trusted Investment Partner</div>
+    </div>
+    <button class="slide-prev" onclick="changeSlide(-1)" aria-label="Previous">&#8592;</button>
+    <button class="slide-next" onclick="changeSlide(1)" aria-label="Next">&#8594;</button>
+  </div>
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <!-- ── Services Cards ── -->
+  <section class="services-section">
+    <h1>Our Services</h1>
+    <p>Discover how Mhlanga Holdings can help you grow and protect your wealth.</p>
+    <div class="card-grid">
+      <div class="card">
+        <img src="img/img25.jpg" alt="Wealth Management">
+        <div class="card-body">
+          <h2>Wealth Management</h2>
+          <p>Our wealth management services are designed to help you build and preserve your wealth for the future.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/img26.jpg" alt="Financial Consulting">
+        <div class="card-body">
+          <h2>Financial Consulting</h2>
+          <p>Expert financial consulting to help you make informed decisions about your finances and long-term goals.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/img27.jpg" alt="Investment Plans">
+        <div class="card-body">
+          <h2>Investment Plans</h2>
+          <p>Diverse investment plans tailored to your risk tolerance and financial ambitions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-logo">
+      <h2>Mhlanga Holdings</h2>
+      <p>Start your investment journey today. Have a stress-free life with us.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="investmentplans.html">Investment Plans</a></li>
+        <li><a href="financialconsulting.html">Financial Consulting</a></li>
+        <li><a href="wealthmanagement.html">Wealth Management</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mhlanga Holdings. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Slideshow ──
+    let slideIndex = 1;
+    let autoTimer;
+
+    function showSlide(n) {
+      const slides = document.querySelectorAll('.mySlides');
+      const dots = document.querySelectorAll('.dot');
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      slides[slideIndex - 1].classList.add('active');
+      dots[slideIndex - 1].classList.add('active');
+    }
+
+    function changeSlide(n) {
+      clearInterval(autoTimer);
+      slideIndex += n;
+      showSlide(slideIndex);
+      startAuto();
+    }
+
+    function currentSlide(n) {
+      clearInterval(autoTimer);
+      slideIndex = n;
+      showSlide(slideIndex);
+      startAuto();
+    }
+
+    function startAuto() {
+      autoTimer = setInterval(() => {
+        slideIndex++;
+        showSlide(slideIndex);
+      }, 5000);
+    }
+
+    showSlide(slideIndex);
+    startAuto();
+
+    // ── Hamburger ──
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+
+    // ── Mobile submenu toggle ──
+    document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+      toggle.addEventListener('click', e => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          toggle.nextElementSibling.classList.toggle('open');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
