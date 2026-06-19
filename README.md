@@ -4,10 +4,10 @@ Website Project Proposal
 Prepared By: Mhlanga Holdings Development Team
 Organisation: Mhlanga Holdings
 Version: 1.0
-Date: May 2026
+Date: June 2026
 Status: Draft for Review
 “Empowering Financial Growth Through Accessible Investment Opportunities”
-Confidential | Page 1 of 10
+Confidential | Page 1 of 9
 ________________________________________
 1. ORGANISATION OVERVIEW
 Organisation	Mhlanga Holdings
@@ -33,7 +33,7 @@ ________________________________________
 • Young professionals seeking financial growth
 • Individuals interested in wealth creation and financial education
 • Small business owners seeking investment guidance
-Confidential | Page 2 of 10
+Confidential | Page 2 of 9
 ________________________________________
 2. WEBSITE GOALS AND OBJECTIVES
 2.1 Primary Goals
@@ -65,7 +65,7 @@ ________________________________________
 • Increase trust and credibility through a professional online platform
 • Improve lead generation and client acquisition
 • Integrate online consultation booking and enquiry systems
-Confidential | Page 3 of 10
+Confidential | Page 3 of 9
 ________________________________________
 4. PROPOSED WEBSITE FEATURES AND FUNCTIONALITY
 4.1 Core Website Pages
@@ -73,7 +73,7 @@ Homepage
 • Hero banner with financial imagery
 • Company overview and mission statement
 • Featured investment services
-• Testimonials and call-to-action buttons
+• Call-to-action buttons
 About Us
 • Company background and vision
 • Mission statement and business objectives
@@ -82,31 +82,25 @@ Services
 • Financial Consulting
 • Investment Plans
 • Wealth Management
-• Financial Education
-Investment Education Section
-• Investment guides and educational resources
-• Financial literacy articles
-• Beginner investor support information
 Gallery Page
 • Financial-themed visuals and website imagery from the existing HTML project
 • Professional banners and investment illustrations
 Contact Us
 • Contact form
 • Email and phone information
-• WhatsApp integration
+• Functional map
 • Social media links
 ________________________________________
 4.2 Key Functionality
 • Mobile-responsive website design
 • User-friendly navigation system
 • Contact and enquiry forms
-• WhatsApp chat integration
 • Interactive JavaScript elements
 • Search Engine Optimisation (SEO)
 • Social media integration
 • Fast-loading pages and optimised images
-• Newsletter subscription section
-Confidential | Page 4 of 10
+• Map to locate business 
+Confidential | Page 4 of 9
 ________________________________________
 5. DESIGN AND USER EXPERIENCE
 5.1 Design Aesthetic and Branding
@@ -149,7 +143,7 @@ ________________________________________
 • Accessible design principles
 • SEO-friendly page structure
 • Easy contact and enquiry access
-Confidential | Page 5 of 10
+Confidential | Page 5 of 9
 ________________________________________
 6. TECHNICAL REQUIREMENTS
 6.1 Hosting and Domain
@@ -158,6 +152,7 @@ Domain Name	www.mhlangaholdings.co.za
 
 Hosting Provider	Afrihost / Hostinger
 Hosting Type	Cloud Hosting
+
 SSL Certificate	Let’s Encrypt SSL
 Email Hosting	support@mhlangaholdings.co.za
 
@@ -171,7 +166,7 @@ CSS3	Styling and responsive layouts
 JAVASCRIPT	Interactivity and functionality
 TAILWIND CSS	Modern responsive design
 GITHUB	Version control
-GOOGLE ANALYTICS	Website analytics and traffic monitoring
+	
 ________________________________________
 7. TIMELINE AND MILESTONES
 Phase	Milestone	Duration
@@ -181,7 +176,7 @@ Phase 3	Frontend Development	Week 5–7
 Phase 4	Testing and Optimisation	Week 8
 Phase 5	Launch Preparation	Week 9
 Phase 6	Website Launch and Support	Week 10
-Confidential | Page 6 of 10
+Confidential | Page 6 of 9
 ________________________________________
 8. BUDGET ESTIMATE
 Category	Description	Estimated Cost (ZAR)
@@ -199,7 +194,7 @@ Budget Notes
 • Ongoing maintenance after 6 months estimated at R1,200/month
 • Marketing and paid advertising budgets excluded
 • Final costs subject to project scope approval
-Confidential | Page 7 of 10
+Confidential | Page 7 of 9
 ________________________________________
 9. WEBSITE CONTENT AND IMAGE REFERENCES
 HTML File References Used
@@ -228,6 +223,13 @@ Services Images
 • IMG10.avif
 • IMG11.avif
 • IMG12.avif
+Gallery Images
+• IMG10.avif
+• IMG15.avif
+• IMG12.avif
+• IMG16.avif
+• IMG30.avif
+• IMG11.avif
 ________________________________________
 Image Source References
 The images used in the HTML project are sourced from royalty-free image platforms including:
@@ -235,9 +237,14 @@ The images used in the HTML project are sourced from royalty-free image platform
 • https://unsplash.com
 • https://pixabay.com
 • https://www.freepik.com
-Confidential | Page 8 of 10
+Confidential | Page 8 of 9
 ________________________________________
-10. REFERENCES
+10. CONCLUSION
+The proposed website for Mhlanga Holdings will serve as a powerful digital platform that promotes financial inclusion, customer engagement, and investment education.
+By combining modern web technologies, professional branding, responsive design, and accessible financial services, the website will position Mhlanga Holdings as a trusted financial services provider in South Africa.
+The website will improve customer accessibility, strengthen the company’s online presence, and support long-term business growth.
+________________________________________
+11. REFERENCES
 The following references informed the research and recommendations in this proposal:
 Afrihost. (2026). Web Hosting Services and Pricing. Retrieved from
 https://www.afrihost.com
@@ -254,12 +261,7 @@ https://gs.statcounter.com
 W3C. (2023). Web Content Accessibility Guidelines (WCAG) 2.1. Retrieved from
 https://www.w3.org/TR/WCAG21/
 ________________________________________
-11. CONCLUSION
-The proposed website for Mhlanga Holdings will serve as a powerful digital platform that promotes financial inclusion, customer engagement, and investment education.
-By combining modern web technologies, professional branding, responsive design, and accessible financial services, the website will position Mhlanga Holdings as a trusted financial services provider in South Africa.
-The website will improve customer accessibility, strengthen the company’s online presence, and support long-term business growth.
-________________________________________
 END OF PROPOSAL
 MHLANGA HOLDINGS WEBSITE PROJECT
-VERSION 1.0 | MAY 2026
-Confidential | Page 10 of 10
+VERSION 1.0 | June 2026
+Confidential | Page 9 of 9
