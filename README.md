@@ -89,7 +89,6 @@ Contact Us
 • Contact form
 • Email and phone information
 • Functional map
-• Social media links
 ________________________________________
 4.2 Key Functionality
 • Mobile-responsive website design
