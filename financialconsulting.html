@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Financial Consulting — Mhlanga Holdings</title>
   <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
+
 <body>
 
   <!-- ── Navigation ── -->
@@ -31,6 +33,13 @@
       </ul>
     </div>
   </nav>
+  <div class="search-container">
+    <input type="text" id="serviceSearch" placeholder="Search services..." onkeyup="searchServices()">
+
+    <button type="button">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
 
   <!-- ── Page Header ── -->
   <div class="page-header">
@@ -45,14 +54,16 @@
         <img src="./IMG/IMG4.avif" alt="Tax Planning">
         <div class="card-body">
           <h2>Tax Planning</h2>
-          <p>Our tax planning services are designed to help you minimize your tax liability and maximize your after-tax returns through strategic structuring.</p>
+          <p>Our tax planning services are designed to help you minimize your tax liability and maximize your after-tax
+            returns through strategic structuring.</p>
         </div>
       </div>
       <div class="card">
         <img src="./IMG/IMG8.avif" alt="Retirement Planning">
         <div class="card-body">
           <h2>Retirement Planning</h2>
-          <p>Our retirement planning services are designed to help you prepare for your future financial needs so you can retire with confidence and comfort.</p>
+          <p>Our retirement planning services are designed to help you prepare for your future financial needs so you
+            can retire with confidence and comfort.</p>
         </div>
       </div>
     </div>
@@ -84,7 +95,7 @@
   <script>
     // ── Hamburger ──
     const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('nav-links');
+    const navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
@@ -102,4 +113,5 @@
     });
   </script>
 </body>
+
 </html>

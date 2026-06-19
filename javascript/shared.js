@@ -102,3 +102,24 @@
   showSlide(0);
   startAuto();
 })();
+
+function searchServices() {
+
+    let input = document.getElementById("serviceSearch");
+    let filter = input.value.toLowerCase();
+
+    let cards = document.querySelectorAll(".service-card");
+
+    cards.forEach(card => {
+
+        let text = card.textContent.toLowerCase();
+
+        if (text.includes(filter)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+}
+

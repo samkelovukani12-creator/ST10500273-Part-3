@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wealth Management — Mhlanga Holdings</title>
   <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
+
 <body>
 
   <!-- ── Navigation ── -->
@@ -32,6 +34,14 @@
     </div>
   </nav>
 
+  <div class="search-container">
+    <input type="text" id="serviceSearch" placeholder="Search services..." onkeyup="searchServices()">
+
+    <button type="button">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+
   <!-- ── Page Header ── -->
   <div class="page-header">
     <h1>Wealth Management</h1>
@@ -45,14 +55,16 @@
         <img src="./IMG/IMG9.avif" alt="Wealth Management">
         <div class="card-body">
           <h2>Asset Protection</h2>
-          <p>We have special expertise to help you grow and protect your assets through diversified portfolios and risk-managed strategies.</p>
+          <p>We have special expertise to help you grow and protect your assets through diversified portfolios and
+            risk-managed strategies.</p>
         </div>
       </div>
       <div class="card">
         <img src="./IMG/IMG4.avif" alt="Portfolio Planning">
         <div class="card-body">
           <h2>Portfolio Planning</h2>
-          <p>Tailored portfolio strategies built around your unique financial goals, timeline, and appetite for risk.</p>
+          <p>Tailored portfolio strategies built around your unique financial goals, timeline, and appetite for risk.
+          </p>
         </div>
       </div>
     </div>
@@ -81,10 +93,10 @@
   </footer>
 
   <script src="./js/shared.js"></script>
-    <script>
+  <script>
     // ── Hamburger ──
     const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('nav-links');
+    const navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
@@ -102,4 +114,5 @@
     });
   </script>
 </body>
+
 </html>

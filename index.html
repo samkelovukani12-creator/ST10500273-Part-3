@@ -124,8 +124,7 @@
       const slides = document.querySelectorAll('.mySlides');
       const dots = document.querySelectorAll('.dot');
       if (n > slides.length) slideIndex = 1;
-      if (n < 1) slideIndex = slides.length;
-      slides.forEach(s => s.classList.remove('active'));
+      if (n < 1) slideIndex = slides.length; slides.forEach(s => s.classList.remove('active'));
       dots.forEach(d => d.classList.remove('active'));
       slides[slideIndex - 1].classList.add('active');
       dots[slideIndex - 1].classList.add('active');
@@ -167,10 +166,7 @@
     // ── Mobile submenu toggle ──
     document.querySelectorAll('.submenu-toggle').forEach(toggle => {
       toggle.addEventListener('click', e => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          toggle.nextElementSibling.classList.toggle('open');
-        }
+        if (window.innerWidth <= 768) { e.preventDefault(); toggle.nextElementSibling.classList.toggle('open'); }
       });
     });
   </script>

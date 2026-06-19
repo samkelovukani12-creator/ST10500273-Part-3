@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Investment Plans — Mhlanga Holdings</title>
   <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
+
 <body>
 
   <!-- ── Navigation ── -->
@@ -32,10 +34,20 @@
     </div>
   </nav>
 
+  <div class="search-container">
+    <input type="text" id="serviceSearch" placeholder="Search services..." onkeyup="searchServices()">
+
+    <button type="button">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+
+
   <!-- ── Page Header ── -->
   <div class="page-header">
     <h1>Investment Plans</h1>
-    <p>Explore our diverse range of investment plans designed to meet your financial goals and risk tolerance — whether you seek steady growth or high returns.</p>
+    <p>Explore our diverse range of investment plans designed to meet your financial goals and risk tolerance — whether
+      you seek steady growth or high returns.</p>
   </div>
 
   <!-- ── Cards ── -->
@@ -45,21 +57,24 @@
         <img src="./IMG/IMG10.avif" alt="Property Investment">
         <div class="card-body">
           <h2>Property Investment</h2>
-          <p>Our property investment plans are designed to help you build wealth through real estate investments with long-term capital appreciation.</p>
+          <p>Our property investment plans are designed to help you build wealth through real estate investments with
+            long-term capital appreciation.</p>
         </div>
       </div>
       <div class="card">
         <img src="./IMG/IMG11.avif" alt="Holiday Wealth">
         <div class="card-body">
           <h2>Holiday Wealth</h2>
-          <p>Our holiday wealth plans are designed to help you save and invest for your dream vacations without compromising your financial future.</p>
+          <p>Our holiday wealth plans are designed to help you save and invest for your dream vacations without
+            compromising your financial future.</p>
         </div>
       </div>
       <div class="card">
         <img src="./IMG/IMG12.avif" alt="Stockvel">
         <div class="card-body">
           <h2>Stockvel</h2>
-          <p>Our stockvel plan helps you save and invest collaboratively with friends or family, combining community trust with financial growth.</p>
+          <p>Our stockvel plan helps you save and invest collaboratively with friends or family, combining community
+            trust with financial growth.</p>
         </div>
       </div>
     </div>
@@ -88,10 +103,10 @@
   </footer>
 
   <script src="./js/shared.js"></script>
-    <script>
+  <script>
     // ── Hamburger ──
     const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('nav-links');
+    const navLinks = document.getElementById('nav-links');
 
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
@@ -109,4 +124,5 @@
     });
   </script>
 </body>
+
 </html>
